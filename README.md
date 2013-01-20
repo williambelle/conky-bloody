@@ -9,6 +9,7 @@ Description
 This conky configuration shows the following information :
 
 * conky-ubuntu - Ubuntu version
+* conky-gnome - Gnome version
 
 Dependencies
 ------------
