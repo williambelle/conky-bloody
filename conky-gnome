@@ -31,7 +31,7 @@ color1 525252         # Gray
 color2 811312         # Red
 color3 7AA6CC         # Blue
 
-update_interval 2
+update_interval 3600
 cpu_avg_samples 4
 
 background yes
