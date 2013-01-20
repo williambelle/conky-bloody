@@ -1,0 +1,40 @@
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+
+own_window_class conky
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_transparent yes
+
+draw_shades no
+draw_outline no
+draw_borders no
+border_width 0
+
+alignment top_left
+minimum_size 1600 0
+maximum_width 1600
+gap_x 5
+gap_y 600
+
+use_xft yes
+xftalpha 0.1
+override_utf8_locale yes 
+xftfont saxMono:size=10
+uppercase no
+use_spacer none
+
+color1 525252         # Gray
+color2 811312         # Red
+color3 7AA6CC         # Blue
+
+update_interval 3600
+
+background yes
+
+TEXT
+${color1}${font OpenLogos:size=46}u${font}  ${voffset -57}${font FairydustB:size=46}${pre_exec cat /etc/lsb-release|grep ID|cut -d= -f2} ${pre_exec cat /etc/lsb-release|grep REL|cut -d= -f2} "${pre_exec cat /etc/lsb-release|grep NAME|cut -d= -f2}"${font}
+${color2}${hr}
