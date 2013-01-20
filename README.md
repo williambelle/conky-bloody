@@ -10,11 +10,13 @@ This conky configuration shows the following information :
 
 * conky-ubuntu - Ubuntu version
 * conky-gnome - Gnome version
+* conky-system - Host, CPU and RAM
 
 Dependencies
 ------------
 
 * conky
+* lm-sensors
 
 Fonts
 -----
@@ -23,3 +25,13 @@ You might need to download these fonts :
 
 * [Open Logos](http://www.dafont.com/openlogos.font)
 * [FairydustB](http://www.dafont.com/fairydustb.font)
+* [SaxMono](http://www.dafont.com/saxmono.font)
+* [StyleBats](http://www.dafont.com/style-bats.font)
+
+Usage
+-----
+
+Add following lines to auto start or try it to just test it running.
+
+    cd /path/to/conky-bloody/
+    ./launch.sh

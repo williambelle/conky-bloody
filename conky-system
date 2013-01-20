@@ -1,0 +1,61 @@
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+
+own_window_class conky
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_transparent yes
+
+draw_shades no
+draw_outline no
+draw_borders no
+border_width 0
+
+alignment top_left
+minimum_size 320 0
+maximum_width 320
+gap_x 5
+gap_y 680
+
+use_xft yes
+xftalpha 0.1
+override_utf8_locale yes 
+xftfont saxMono:size=10
+uppercase no
+use_spacer none
+
+color1 525252         # Gray
+color2 BF0A0D         # Red
+color3 7AA6CC         # Blue
+
+update_interval 2
+cpu_avg_samples 4
+
+background yes
+
+TEXT
+${color2}${font StyleBats:size=18}U${font} ${voffset -7}${offset -3}System
+
+${offset 35}${color1}Host    : $nodename
+${offset 35}${color1}Mode    : ${pre_exec uname -m}
+${offset 35}${color1}Kernel  : ${color3}linux-${kernel}
+${offset 35}${color1}Uptime  : ${color2}${uptime}
+${offset 35}${color1}Update  : ${color2}${execpi 60 aptitude search "~U" | wc -l | tail} ${color1}available
+
+${color2}${font StyleBats:size=16}a${font}${voffset -3} Intel Core 2 Duo E7300 ${cpu cpu}%
+
+
+${offset 35}${color1}Core 1: ${color3}${exec sensors|grep 'Core 0'|awk '{print $3}'}${goto 170}${color2}${cpu cpu1}%${color1}${alignr}${color3}${freq_g 1} GHz
+${offset 35}${color1}${cpugraph cpu1 20,0 000000 BF0A0D}
+
+${offset 35}${color1}Core 2: ${color3}${exec sensors|grep 'Core 1'|awk '{print $3}'}${goto 170}${color2}${cpu cpu2}%${color1}${alignr}${color3}${freq_g 2} GHz
+${offset 35}${color1}${cpugraph cpu2 20,0 000000 BF0A0D}
+
+${color2}${font StyleBats:size=16}p${font}${voffset -3} Memory
+
+${color1}${offset 125}$mem of $memmax
+${offset 35}${color1}RAM  : ${color3}$memperc %${goto 130}${color1}${membar 8,170}
+${offset 35}${color1}Swap : ${color3}$swapperc  %${goto 130}${color1}${swapbar 8,170}
