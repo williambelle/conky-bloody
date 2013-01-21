@@ -12,6 +12,7 @@ This conky configuration shows the following information :
 * conky-gnome - Gnome version
 * conky-system - Host, CPU and Process
 * conky-network-ram - Network and Memory
+* conky-gpu-sensor-fan - GPU, Temperature and Fan
 
 Dependencies
 ------------

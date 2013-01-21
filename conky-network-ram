@@ -49,9 +49,9 @@ ${offset 35}${color1}${downspeedgraph eth1 20,0 000000 BF0A0D 1700KiB}
 
 ${color2}${font StyleBats:size=16}z${font} Ports ${alignr}
 
-${color1}${offset 35}Open    : ${color3} ${tcp_portmon 1 65535 count}
-${color1}${offset 35}Inbound : ${color3} ${tcp_portmon 1 32767 count} 
-${color1}${offset 35}Outbound: ${color3} ${tcp_portmon 32768 61000 count}
+${color1}${offset 35}Open     : ${color3}${tcp_portmon 1 65535 count}
+${color1}${offset 35}Inbound  : ${color3}${tcp_portmon 1 32767 count} 
+${color1}${offset 35}Outbound : ${color3}${tcp_portmon 32768 61000 count}
 
 ${color2}${font StyleBats:size=16}p${font}${voffset -3} Memory
 
