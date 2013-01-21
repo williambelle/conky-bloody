@@ -11,14 +11,16 @@ This conky configuration shows the following information :
 * conky-ubuntu - Ubuntu version
 * conky-gnome - Gnome version
 * conky-system - Host, CPU and Process
-* conky-network-ram - Network and Memory
+* conky-network - Network
 * conky-gpu-sensor-fan - GPU, Temperature and Fan
+* conky-process - Processes
 
 Dependencies
 ------------
 
 * conky
 * lm-sensors
+* hddtemp
 
 Fonts
 -----

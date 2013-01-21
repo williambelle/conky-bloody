@@ -18,7 +18,7 @@ alignment top_left
 minimum_size 750 0
 maximum_width 750
 gap_x 960
-gap_y 579
+gap_y 629
 
 use_xft yes
 xftalpha 0.1

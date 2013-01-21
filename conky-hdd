@@ -1,0 +1,59 @@
+double_buffer yes
+no_buffers yes
+text_buffer_size 2048
+
+own_window_class conky
+own_window yes
+own_window_type normal
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_argb_visual yes
+own_window_transparent yes
+
+draw_shades no
+draw_outline no
+draw_borders no
+border_width 0
+
+alignment top_left
+minimum_size 320 0
+maximum_width 320
+gap_x 920
+gap_y 730
+
+use_xft yes
+xftalpha 0.1
+override_utf8_locale yes 
+xftfont saxMono:size=10
+uppercase no
+use_spacer none
+
+color1 525252         # Gray
+color2 BF0A0D         # Red
+color3 7AA6CC         # Blue
+
+update_interval 2
+cpu_avg_samples 4
+
+background yes
+
+TEXT
+${color2}${font StyleBats:size=16}e${font} Internal HDD
+
+${offset 35}${color1} Hitachi          160Gb : ${execi 10 hddtemp -n /dev/sda}°C
+${offset 35}${color1} Western Digital  160Gb : ${execi 10 hddtemp -n /dev/sdb}°C
+${offset 35}${color1} Seagate          250Gb : ${execi 10 hddtemp -n /dev/sdc}°C
+
+${offset 35}${color1}/root${goto 130}Used ${color3}${fs_used_perc /}%${alignr}${color1}Free ${color2}${fs_free /}
+${offset 35}${color1}${fs_bar 9 /}
+
+${offset 35}${color1}/home${goto 130}Used ${color3}${fs_used_perc /home}%${alignr}${color1}Free ${color2}${fs_free /home}
+${offset 35}${color1}${fs_bar 9 /home}
+
+${offset 35}${color1}/windows${goto 130}Used ${color3}${fs_used_perc /media/0C90D18F90D17F9E/}%${alignr}${color1}Free ${color2}${fs_free /media/0C90D18F90D17F9E/}
+${offset 35}${color1}${fs_bar 9 /media/0C90D18F90D17F9E/}
+
+${offset 35}${color1}/multimedia${goto 130}Used ${color3}${fs_used_perc /media/Data2/}%${alignr}${color1}Free ${color2}${fs_free /media/Data2/}
+${offset 35}${color1}${fs_bar 9 /media/Data2/}
+
+${offset 35}${color1}/extra-1${goto 130}Used ${color3}${fs_used_perc /media/f5b861e9-9eff-4e0d-a1ec-5ae270bff087/}%${alignr}${color1}Free ${color2}${fs_free /media/f5b861e9-9eff-4e0d-a1ec-5ae270bff087/}
+${offset 35}${color1}${fs_bar 9 /media/f5b861e9-9eff-4e0d-a1ec-5ae270bff087/}

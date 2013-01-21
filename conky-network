@@ -18,7 +18,7 @@ alignment top_left
 minimum_size 320 0
 maximum_width 320
 gap_x 340
-gap_y 680
+gap_y 730
 
 use_xft yes
 xftalpha 0.1
@@ -52,9 +52,3 @@ ${color2}${font StyleBats:size=16}z${font} Ports ${alignr}
 ${color1}${offset 35}Open     : ${color3}${tcp_portmon 1 65535 count}
 ${color1}${offset 35}Inbound  : ${color3}${tcp_portmon 1 32767 count} 
 ${color1}${offset 35}Outbound : ${color3}${tcp_portmon 32768 61000 count}
-
-${color2}${font StyleBats:size=16}p${font}${voffset -3} Memory
-
-${color1}${offset 125}$mem of $memmax
-${offset 35}${color1}RAM  : ${color3}$memperc %${goto 130}${color1}${membar 8,170}
-${offset 35}${color1}Swap : ${color3}$swapperc  %${goto 130}${color1}${swapbar 8,170}
