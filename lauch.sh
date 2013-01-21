@@ -6,4 +6,5 @@ sleep 2
 conky -d -c conky-ubuntu
 conky -d -c conky-gnome
 conky -d -c conky-system
+conky -d -c conky-network-ram
 exit

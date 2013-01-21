@@ -10,7 +10,8 @@ This conky configuration shows the following information :
 
 * conky-ubuntu - Ubuntu version
 * conky-gnome - Gnome version
-* conky-system - Host, CPU and RAM
+* conky-system - Host, CPU and Process
+* conky-network-ram - Network and Memory
 
 Dependencies
 ------------
