@@ -39,3 +39,8 @@ Add following lines to auto start or try it to just test it running.
 
     cd /path/to/conky-bloody/
     ./launch.sh
+
+Screenshot
+----------
+
+![Screenshot](https://raw.github.com/williambelle/conky-bloody/master/screenshot.png)
