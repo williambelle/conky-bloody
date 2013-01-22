@@ -49,11 +49,14 @@ ${offset 35}${color1}${fs_bar 9 /}
 ${offset 35}${color1}/home${goto 130}Used ${color3}${fs_used_perc /home}%${alignr}${color1}Free ${color2}${fs_free /home}
 ${offset 35}${color1}${fs_bar 9 /home}
 
-${offset 35}${color1}/windows${goto 130}Used ${color3}${fs_used_perc /media/0C90D18F90D17F9E/}%${alignr}${color1}Free ${color2}${fs_free /media/0C90D18F90D17F9E/}
-${offset 35}${color1}${fs_bar 9 /media/0C90D18F90D17F9E/}
+${offset 35}${color1}/windows${goto 130}Used ${color3}${fs_used_perc /media/windows/}%${alignr}${color1}Free ${color2}${fs_free /media/windows/}
+${offset 35}${color1}${fs_bar 9 /media/windows/}
 
-${offset 35}${color1}/multimedia${goto 130}Used ${color3}${fs_used_perc /media/Data2/}%${alignr}${color1}Free ${color2}${fs_free /media/Data2/}
-${offset 35}${color1}${fs_bar 9 /media/Data2/}
+${offset 35}${color1}/multimedia${goto 130}Used ${color3}${fs_used_perc /media/multimedia/}%${alignr}${color1}Free ${color2}${fs_free /media/multimedia/}
+${offset 35}${color1}${fs_bar 9 /media/multimedia/}
 
-${offset 35}${color1}/extra-1${goto 130}Used ${color3}${fs_used_perc /media/f5b861e9-9eff-4e0d-a1ec-5ae270bff087/}%${alignr}${color1}Free ${color2}${fs_free /media/f5b861e9-9eff-4e0d-a1ec-5ae270bff087/}
-${offset 35}${color1}${fs_bar 9 /media/f5b861e9-9eff-4e0d-a1ec-5ae270bff087/}
+${offset 35}${color1}/extra-1${goto 130}Used ${color3}${fs_used_perc /media/extra-1/}%${alignr}${color1}Free ${color2}${fs_free /media/extra-1/}
+${offset 35}${color1}${fs_bar 9 /media/extra-1/}
+
+${offset 35}${color1}/extra-2${goto 130}Used ${color3}${fs_used_perc /media/extra-2/}%${alignr}${color1}Free ${color2}${fs_free /media/extra-2/}
+${offset 35}${color1}${fs_bar 9 /media/extra-2/}
