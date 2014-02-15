@@ -37,12 +37,12 @@ cpu_avg_samples 4
 background yes
 
 TEXT
-${color2}${font StyleBats:size=16}s${font}${voffset -3} NVidia ${execi 300 nvidia-settings -q gpus |grep '0] (' | cut -d '(' -f 2,2 | sed -e 's/.\{1\}$//'}
+${color2}${font StyleBats:size=16}s${font}${voffset -3} NVidia ${execi 300 nvidia-settings -q gpus | grep '0] (' | cut -d '(' -f 2,2 | sed -e 's/.\{1\}$//'}
 
-${offset 35}${color1}Driver       : ${execi 300 nvidia-settings -q NvidiaDriverVersion -t}
-${offset 35}${color1}Temperature  : ${execi 2 nvidia-settings -q gpucoretemp | grep Attribute | awk '{print $4}' | sed -e 's/\.//'}°C
-${offset 35}${color1}GPU Clock    : ${execi 2 nvidia-settings -q GPUCurrentClockFreqs | grep Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
-${offset 35}${color1}Memory Clock : ${execi 2 nvidia-settings -q GPUCurrentClockFreqs | grep Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f2} MHz
+${offset 35}${color1}Driver       : ${execi 300 nvidia-settings -q NvidiaDriverVersion | grep -m 1 Attribute | awk '{print $4}'}
+${offset 35}${color1}Temperature  : ${execi 2 nvidia-settings -q gpucoretemp | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//'}°C
+${offset 35}${color1}GPU Clock    : ${execi 2 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
+${offset 35}${color1}Memory Clock : ${execi 2 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f2} MHz
 ${offset 35}${color1}Fan speed    : ${execi 5 nvidia-settings -tq [fan:0]/GPUCurrentFanSpeed}%
 
 ${color2}${font StyleBats:size=16}r${font} Sensors
