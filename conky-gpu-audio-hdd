@@ -1,0 +1,61 @@
+conky.config = {
+  double_buffer    = true,
+  no_buffers       = true,
+  text_buffer_size = 2048,
+
+  own_window       = true,
+  own_window_type  = 'normal',
+  own_window_class = 'conky',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_argb_visual = true,
+  own_window_transparent = true,
+
+  draw_shades  = false,
+  draw_outline = false,
+  draw_borders = false,
+  border_width = 0,
+
+  alignment     = 'top_left',
+  minimum_width = 280,
+  maximum_width = 280,
+  gap_x         = 680,
+  gap_y         = 730,
+
+  use_xft    = true,
+  xftalpha   = 0.1,
+  uppercase  = false,
+  use_spacer = 'none',
+  override_utf8_locale = yes,
+  font = 'saxMono:size=10',
+
+  color1 = '525252',
+  color2 = '811312',
+  color3 = '7AA6CC',
+
+  background      = true,
+  update_interval = 2,
+  cpu_avg_samples = 4
+}
+
+conky.text = [[
+${color2}${font StyleBats:size=16}s${font}${voffset -3} NVidia ${execi 300 nvidia-settings -q gpus | grep '0] (' | cut -d '(' -f 2,2 | sed -e 's/.\{1\}$//'}
+
+${offset 35}${color1}Driver       : ${execi 300 nvidia-settings -q NvidiaDriverVersion | grep -m 1 Attribute | awk '{print $4}'}
+${offset 35}${color1}Temperature  : ${execi 2 nvidia-settings -q gpucoretemp | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//'}°C
+${offset 35}${color1}GPU Clock    : ${execi 2 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f1} MHz
+${offset 35}${color1}Memory Clock : ${execi 2 nvidia-settings -q GPUCurrentClockFreqs | grep -m 1 Attribute | awk '{print $4}' | sed -e 's/\.//' | cut -d, -f2} MHz
+${offset 35}${color1}Fan speed    : ${execi 5 nvidia-settings -tq [fan:0]/GPUTargetFanSpeed}%
+
+${color2}${font StyleBats:size=16}W${font} Intel HD Audio
+
+${offset 35}${color1}Driver :${execi 65536 lspci -v | grep -A7 -i "audio" | grep "Kernel driver" | cut -d: -f2}
+${offset 35}${color1}Volume : ${execi 2 amixer sget Master,0 | egrep -o '[0-9]+%'}
+
+${color2}${font StyleBats:size=16}e${font} HDD
+
+${offset 35}${color1}Western Digital : ${execi 10 hddtemp -n /dev/sda}°C
+${offset 35}${color1}Seagate         : ${execi 10 hddtemp -n /dev/sdb}°C
+${offset 35}${color1}Seagate         : ${execi 10 hddtemp -n /dev/sdc}°C
+${offset 35}${color1}Seagate         : ${execi 10 hddtemp -n /dev/sdd}°C
+
+]]
