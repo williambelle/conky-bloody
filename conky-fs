@@ -41,24 +41,24 @@ conky.text = [[
 ${color2}${font StyleBats:size=16}n${font} File System
 
 
-${offset 35}${color1}/root${goto 130}Used ${color3}${fs_used_perc /}%${alignr}${color1}Free ${color2}${fs_free /}
+${offset 35}${color1}root${goto 130}Used ${color3}${fs_used_perc /}%${alignr}${color1}Free ${color2}${fs_free /}
 ${offset 35}${color1}${fs_bar 9 /}
 
-${offset 35}${color1}/home${goto 130}Used ${color3}${fs_used_perc /home}%${alignr}${color1}Free ${color2}${fs_free /home}
+${offset 35}${color1}home${goto 130}Used ${color3}${fs_used_perc /home}%${alignr}${color1}Free ${color2}${fs_free /home}
 ${offset 35}${color1}${fs_bar 9 /home}
 
-${offset 35}${color1}/windows${goto 130}Used ${color3}${fs_used_perc /media/william/Windows/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Windows/}
+${offset 35}${color1}Windows${goto 130}Used ${color3}${fs_used_perc /media/william/Windows/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Windows/}
 ${offset 35}${color1}${fs_bar 9 /media/william/Windows/}
 
-${offset 35}${color1}/multimedia${goto 130}Used ${color3}${fs_used_perc /media/william/Multimedia/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Multimedia/}
+${offset 35}${color1}Multimedia${goto 130}Used ${color3}${fs_used_perc /media/william/Multimedia/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Multimedia/}
 ${offset 35}${color1}${fs_bar 9 /media/william/Multimedia/}
 
-${offset 35}${color1}/extra-1${goto 130}Used ${color3}${fs_used_perc /media/william/Extra/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Extra/}
+${offset 35}${color1}Extra${goto 130}Used ${color3}${fs_used_perc /media/william/Extra/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Extra/}
 ${offset 35}${color1}${fs_bar 9 /media/william/Extra/}
 
-${offset 35}${color1}/extra-2${goto 130}Used ${color3}${fs_used_perc /media/william/Data/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Data/}
+${offset 35}${color1}Data${goto 130}Used ${color3}${fs_used_perc /media/william/Data/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Data/}
 ${offset 35}${color1}${fs_bar 9 /media/william/Data/}
 
-${offset 35}${color1}/extra-2${goto 130}Used ${color3}${fs_used_perc /media/william/Dev/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Dev/}
+${offset 35}${color1}Dev${goto 130}Used ${color3}${fs_used_perc /media/william/Dev/}%${alignr}${color1}Free ${color2}${fs_free /media/william/Dev/}
 ${offset 35}${color1}${fs_bar 9 /media/william/Dev/}
 ]]
