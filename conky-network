@@ -16,8 +16,8 @@ conky.config = {
   border_width = 0,
 
   alignment     = 'top_left',
-  minimum_width = 320,
-  maximum_width = 320,
+  minimum_width = 310,
+  maximum_width = 310,
   gap_x         = 340,
   gap_y         = 730,
 
