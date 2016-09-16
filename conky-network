@@ -1,54 +1,58 @@
-double_buffer yes
-no_buffers yes
-text_buffer_size 2048
+conky.config = {
+  double_buffer    = true,
+  no_buffers       = true,
+  text_buffer_size = 2048,
 
-own_window_class conky
-own_window yes
-own_window_type normal
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-own_window_argb_visual yes
-own_window_transparent yes
+  own_window       = true,
+  own_window_type  = 'normal',
+  own_window_class = 'conky',
+  own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+  own_window_argb_visual = true,
+  own_window_transparent = true,
 
-draw_shades no
-draw_outline no
-draw_borders no
-border_width 0
+  draw_shades  = false,
+  draw_outline = false,
+  draw_borders = false,
+  border_width = 0,
 
-alignment top_left
-minimum_size 320 0
-maximum_width 320
-gap_x 340
-gap_y 730
+  alignment     = 'top_left',
+  minimum_width = 320,
+  maximum_width = 320,
+  gap_x         = 340,
+  gap_y         = 730,
 
-use_xft yes
-xftalpha 0.1
-override_utf8_locale yes 
-xftfont saxMono:size=10
-uppercase no
-use_spacer none
+  use_xft    = true,
+  xftalpha   = 0.1,
+  uppercase  = false,
+  use_spacer = 'none',
+  override_utf8_locale = true,
+  font = 'saxMono:size=10',
 
-color1 525252         # Gray
-color2 BF0A0D         # Red
-color3 7AA6CC         # Blue
+  color1 = '525252',
+  color2 = '811312',
+  color3 = '7AA6CC',
 
-update_interval 2
-cpu_avg_samples 4
+  background      = true,
+  update_interval = 2,
+  cpu_avg_samples = 4
+}
 
-background yes
-
-TEXT
-${color2}${font StyleBats:size=16}5${font} IP : ${color3}${if_up eth1}${addr eth1}${else}Disconnected
+conky.text = [[
+${color2}${font StyleBats:size=16}5${font} IP : ${color3}${if_up enp0s25}${addr enp0s25}${else}Disconnected
 ${endif}
 
 ${color2}${font StyleBats:size=16}l${font} Transfers LAN
 
-${offset 35}${color1}Up   : ${color3}${upspeed eth1}${alignr}${color1}Total : ${color2}${totalup eth1}
-${offset 35}${color1}${upspeedgraph eth1 20,0 000000 BF0A0D 1700KiB}
-${offset 35}${color1}Down : ${color3}${downspeed eth1}${alignr}${color1}Total : ${color2}${totaldown eth1}
-${offset 35}${color1}${downspeedgraph eth1 20,0 000000 BF0A0D 1700KiB}
+${offset 35}${color1}Up   : ${color3}${upspeed enp0s25}${alignr}${color1}Total : ${color2}${totalup enp0s25}
+${offset 35}${color1}${upspeedgraph enp0s25 20,0 000000 BF0A0D 1700KiB}
+${offset 35}${color1}Down : ${color3}${downspeed enp0s25}${alignr}${color1}Total : ${color2}${totaldown enp0s25}
+${offset 35}${color1}${downspeedgraph enp0s25 20,0 000000 BF0A0D 1700KiB}
 
 ${color2}${font StyleBats:size=16}z${font} Ports ${alignr}
 
 ${color1}${offset 35}Open     : ${color3}${tcp_portmon 1 65535 count}
-${color1}${offset 35}Inbound  : ${color3}${tcp_portmon 1 32767 count} 
+${color1}${offset 35}Inbound  : ${color3}${tcp_portmon 1 32767 count}
 ${color1}${offset 35}Outbound : ${color3}${tcp_portmon 32768 61000 count}
+
+${color2}${font Mailart:size=13}N${font} Mail
+]]
