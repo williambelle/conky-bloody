@@ -12,7 +12,8 @@ This conky configuration shows the following information :
 * conky-gnome - Gnome version
 * conky-system - Host, CPU and Process
 * conky-network - Network
-* conky-gpu-sensor-fan - GPU, Temperature and Fan
+* conky-gpu-audio-hdd - GPU, Audio and Hdd
+* conky-fs - File System
 * conky-process - Processes
 
 Dependencies
@@ -31,14 +32,17 @@ You might need to download these fonts :
 * [FairydustB](http://www.dafont.com/fairydustb.font)
 * [SaxMono](http://www.dafont.com/saxmono.font)
 * [StyleBats](http://www.dafont.com/style-bats.font)
+* [Mailart](http://www.dafont.com/mailart-graphics.font)
 
 Usage
 -----
 
 Add following lines to auto start or try it to just test it running.
 
-    cd /path/to/conky-bloody/
-    ./launch.sh
+```bash
+$ cd /path/to/conky-bloody/
+$ ./launch.sh
+```
 
 Screenshot
 ----------
